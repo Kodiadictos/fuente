@@ -1,0 +1,11 @@
+<!-- Buffer al estilo KODIADICTOS -->
+<advancedsettings>
+    <cache>
+        <buffermode>1</buffermode>
+        <memorysize>42642090</memorysize>
+        <readfactor>20</readfactor>
+    </cache>
+    <airplayport>20</airplayport>
+    <airtunesport>2</airtunesport>
+    <enableairtunesdebuglog>true</enableairtunesdebuglog>
+</advancedsettings>

@@ -1,0 +1,37 @@
+<!-- Modificado por kodiadictos -->
+
+
+<playercorefactory>
+	<players>
+		<!-- VLC -->
+		<player name="VLC" type="ExternalPlayer" audio="false" video="true">
+			<!-- Windows -->
+			<filename>C:\Program Files (x86)\VideoLAN\VLC\VLC.exe</filename>
+			<hidexbmc>true</hidexbmc>
+			<playcountminimumtime>120</playcountminimumtime>
+		</player>
+	</players>
+
+
+	<!-- REGLAS -->
+
+	<rules action="prepend">
+
+	<!-- Archivos Biblioteca de 720p y 1080p -->
+		<rule videoresolution="720|1080" player="VLC"/>
+		
+	<!-- Archivos SAMBA -->
+		<rule protocols="smb" player="DVDPLAYER"/>
+
+	<!-- Streams HTTP y Contenido Online -->
+		<rule protocols="http" player="VLC"/>
+		
+	<!-- Streams RTMP, RTSP -->
+		<rule protocols="rtmp" player="DVDPLAYER"/>
+		<rule protocols="rtsp" player="DVDPLAYER"/>
+			
+	<!-- DVD -->
+		<rule dvdimage="true" player="DVDPLAYER"/>
+			
+	</rules>
+</playercorefactory>

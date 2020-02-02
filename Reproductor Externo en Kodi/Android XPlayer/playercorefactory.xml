@@ -1,0 +1,37 @@
+<!-- MODIFICADO POR KODIADICTOS -->
+<!-- https://kodiadictos.com -->
+
+<playercorefactory>
+	<players>
+		<!--XPLAYER-->
+		<player name="XPlayer" type="ExternalPlayer" audio="false" video="true">
+			<!-- Android -->
+			<filename>video.player.videoplayer</filename>
+			<hidexbmc>true</hidexbmc>
+			<playcountminimumtime>120</playcountminimumtime>
+		</player>
+	</players>
+
+
+	<!-- REGLAS -->
+
+	<rules action="prepend">
+
+	<!-- Archivos Biblioteca de 720p y 1080p -->
+		<rule videoresolution="720|1080" player="XPlayer"/>
+		
+	<!-- Archivos SAMBA -->
+		<rule protocols="smb" player="DVDPLAYER"/>
+
+	<!-- Streams HTTP y Contenido Online -->
+		<rule protocols="http" player="XPlayer"/>
+		
+	<!-- Streams RTMP, RTSP -->
+		<rule protocols="rtmp" player="DVDPLAYER"/>
+		<rule protocols="rtsp" player="DVDPLAYER"/>
+			
+	<!-- DVD -->
+		<rule dvdimage="true" player="DVDPLAYER"/>
+			
+	</rules>
+</playercorefactory>

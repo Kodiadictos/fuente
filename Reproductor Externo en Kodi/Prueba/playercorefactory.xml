@@ -1,0 +1,36 @@
+<playercorefactory>
+    <players>
+        <player
+            name="WebVideoCaster"
+            audio="false"
+            type="ExternalPlayer"
+            video="true">
+            <filename>com.instantbits.cast.webvideo</filename>
+            <hidexbmc>true</hidexbmc>
+            <playcountminimumtime>120</playcountminimumtime>
+        </player>
+    </players>
+    <rules action="prepend">
+        <rule
+            player="WebVideoCaster"
+            protocols="smb"/>
+        <rule
+            dvdimage="true"
+            player="WebVideoCaster"/>
+        <rule
+            player="WebVideoCaster"
+            protocols="rtmp"/>
+        <rule
+            player="WebVideoCaster"
+            protocols="rtsp"/>
+        <rule
+            player="WebVideoCaster"
+            protocols="sop"/>
+        <rule
+            internetstream="true"
+            player="WebVideoCaster"/>
+        <rule
+            player="WebVideoCaster"
+            video="true"/>
+    </rules>
+</playercorefactory>
